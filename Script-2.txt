@@ -1,0 +1,22 @@
+--show all fields from staff table
+select * from staff s;
+
+--show address and distinct columns from address table
+select address_id from staff s;
+select distinct s.address_id from staff s;
+
+--show all the distinct last names from customer table
+select distinct c.last_name from customer c;
+
+--find the number of films
+select count(*) total_row from film f ;
+select count(f.film_id) total_film from film f ;
+
+--find the number of distinct first name in actor table
+select first_name from actor a ;
+select distinct first_name from actor a ;
+select count(distinct a.first_name) total_actor from actor a ;
+
+--show the data rental_id and the difference between return_date and rental_date in rental table
+select rental_id from rental r ;
+select return_date - rental_date as difference from rental r ;
